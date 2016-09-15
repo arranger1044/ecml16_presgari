@@ -58,11 +58,13 @@
 
 \begin{frame}[t]
   \frametitle{Tractable Probabilistic Models (TPMs)}
-   \small
-   Many Machine Learning problems can be reframed as probabilitic
-   inference\\[6pt]
-   Plenty of Probabilistic Models learned as density estimators\\[6pt]
-   \emph{Inference is hard}.
+  \small
+  Plenty of Probabilistic Models learned as \emph{density estimators}\\[6pt]
+  
+  Many Machine Learning problems can be reframed as probabilitic
+  inference\\[6pt]
+   
+   \dots but \emph{\textbf{inference is hard}}.
    \begin{center}
     \begin{minipage}[t]{0.29\linewidth}
       \begin{center}
@@ -76,7 +78,7 @@
         %   \textcolor{tractable_green}{\cmark \textbf{MPE}},
         %   \textcolor{tractable_green}{\cmark \textbf{Z}}
         % \end{minipage}
-        \textbf{\emph{Low treewidth PGMs}}\\[20pt]
+        \textbf{\emph{\textcolor{tractable_green}{Low treewidth PGMs}}}\\[20pt]
       \end{center}
     \end{minipage}\hfill\begin{minipage}[t]{0.32\linewidth}
       \begin{center}
@@ -90,7 +92,7 @@
         %   \textcolor{untractable_red}{\xmark \textbf{MPE}},
         %   \textcolor{tractable_green}{\cmark \textbf{Z}}
         % \end{minipage}
-        \textbf{\emph{Computational Graphs}}\\[20pt]
+        \textbf{\emph{\textcolor{tractable_green}{Computational Graphs}}}\\[20pt]
       \end{center}
     \end{minipage}\hfill\begin{minipage}[t]{0.29\linewidth}
       \begin{center}
@@ -104,11 +106,11 @@
         %   \textcolor{untractable_red}{\xmark \textbf{MPE}},
         %   \textcolor{untractable_red}{\xmark \textbf{Z}}
         % \end{minipage}
-        \textbf{\emph{Autoregressive NNs}}\\[20pt]
+        \textbf{\emph{\textcolor{tractable_green}{Autoregressive NNs}}}\\[20pt]
       \end{center}
     \end{minipage}
   \end{center}\vspace{7pt}
-  $\rightarrow$ TPMs allow \textbf{exact} inference to be computed in polynomial time!
+  $\rightarrow$ TPMs allow \textbf{exact} inference to be computed in \textbf{\textcolor{tractable_green}{polynomial time}}!
 \end{frame}
 
 
@@ -117,21 +119,24 @@
   \frametitle{Representation learning with TPMs}
   
   Given a set of i.i.d samples $\{\mathbf x^i\}_{i=1}^m\sim
-  \mathbf{X}$,  a TPM $\theta$, a dataset $\{\mathbf x^i\}_{i=1}^m$,
-  we want to generate an embedding for each sample $i$ such as:
-  $$\mathbf{e}^{i}=f_{p,\theta}(\mathbf{x}^{i}),\quad \mathbf{e}^{i}\in\mathbb{R}^{d}$$
-  with $f$ being the transformation by $\theta$
-  encoding $p(\mathbf{X})$.\\[10pt]
+  \mathbf{X}$,  a TPM $\theta$,  we want to generate an embedding
+  $\mathbf{e}^{i}\in\mathbb{R}^{d}$ for
+  each sample $i$ such as:
   
-  Idea: evaluate $\theta$ \emph{\textbf{several}} times by constructing \emph{\textbf{random
+  $$\mathbf{e}^{i}=f_{p,\theta}(\mathbf{x}^{i})$$
+  
+  with $f$ being the transformation by $\theta$
+  encoding the distribution $p(\mathbf{X})$.\\[10pt]
+  
+  \emph{Idea}: evaluate $\theta$ \emph{\textbf{several}} times by constructing \emph{\textbf{random
     queries}} (e.g. sample $\mathbf{Q}_{j} \subseteq \mathbf{X}, j =
   1\dots,d$),
   then use the probability value of each query as an embedding component:
   
   $$e_{j}^{i}=p_{\theta}(\mathbf{Q}_{j}=\mathbf{x}^{i}_{\mathbf{Q}_{j}})$$\\[10pt]
 
-  $\rightarrow$ reuse previously learned models, as \emph{black boxes}\par
-  $\rightarrow$ exploit embeddings for clustering, classification,\dots
+  $\rightarrow$ \underline{reuse} previously learned models, as \emph{black boxes}\par
+  $\rightarrow$ \underline{exploit} embeddings for clustering, classification,\dots
   
   
 \end{frame}
@@ -149,7 +154,7 @@
   \begin{center}
      \includegraphics[width=0.47\linewidth]{figures/lines-ocr_letters}\hfill\includegraphics[width=0.47\linewidth]{figures/lines-bmnist}
    \end{center}
-   \hspace{15pt}$\rightarrow$ trade-off between likelihood over $\mathbf{X}$ and
+   \hspace{15pt}$\rightarrow$ \underline{trade-off} between likelihood over $\mathbf{X}$ and
    accuracy over $Y$
 \end{frame}
 
