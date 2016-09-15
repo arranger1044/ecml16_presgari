@@ -1,0 +1,16 @@
+*.aux
+*.log
+*.toc
+*.bbl
+*.blg
+*.bgl
+*.el
+**/auto/*
+*.synctex.gz
+*.out
+*camera-ready.zip
+*.nav
+*.run.xml
+*.snm
+*-blx.bib
+*.bcf

@@ -1,0 +1,57 @@
+\documentclass[xcolor={usenames,dvipsnames,svgnames}, compress]{beamer}
+
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{wrapfig}
+\usepackage[style=authoryear-comp]{biblatex}
+
+\usepackage[font=scriptsize]{caption}
+
+% 
+% custom colors
+\definecolor{untractable_red}{RGB}{209, 25, 25}
+\definecolor{tractable_green}{RGB}{0, 153, 51}
+
+\usetheme{enziteto}
+
+
+\setbeamertemplate{headline}{}
+
+\addbibresource{../referomnia/referomnia.bib}
+
+\begin{document}
+
+\newlength{\custombulletheight}
+\setlength{\custombulletheight}{\dimexpr0.5\ht1-0.5\ht2}
+
+\title{Towards Representation Learning\par with Tractable Probabilistic Models}
+\author{Antonio  Vergari, Nicola {Di Mauro} and Floriana Esposito}
+\institute{Lacam$@$DIB$@$Uniba}
+\institute{Università degli Studi di Bari}
+\department{Dipartimento di Informatica}
+\laboratory{LACAM Laboratory}
+\group{Machine Learning}
+\institutelogo{\includegraphics[width=25pt]{figures/unibaba}}
+\lablogo{\includegraphics[width=35pt]{figures/lacam}}
+\date{19th September - \textbf{ECML-PKDD} - Riva del Garda, Italy}
+
+
+{
+  \setbeamertemplate{headline}{}
+  \setbeamertemplate{footline}{}
+  \begin{frame}
+    \titlepage
+  \end{frame}
+}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% TeX-master: t
+%%% End:
